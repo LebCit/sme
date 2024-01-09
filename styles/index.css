@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+:root {
+	--sme-br: 5px;
+	--sme-ff: Verdana, Geneva, Tahoma, sans-serif;
+	--sme-fs: calc(15px + 0.390625vw);
+	--sme-gray-1: #fcfcfd;
+	--sme-gray-2: #f8fafc;
+	--sme-gray-3: #eef2f6;
+	--sme-gray-4: #e3e8ef;
+	--sme-gray-5: #cdd5df;
+	--sme-gray-6: #9aa4b2;
+	--sme-gray-7: #697586;
+	--sme-gray-8: #4b5565;
+	--sme-gray-9: #364152;
+	--sme-gray-10: #202939;
+	--sme-gray-11: #121926;
+	--sme-light-editor-border: 5px solid var(--sme-gray-3);
+	--sme-lh: 1.5;
+
+	background-color: var(--sme-gray-10);
+	color: var(--sme-gray-1);
+	line-height: var(--sme-lh);
+	font-family: var(--sme-ff);
+	font-size: var(--sme-fs);
+}
+
+sme-write-toolbar,
+sme-view-toolbar {
+	background-color: var(--sme-gray-10);
+	border: var(--sme-light-editor-border);
+	border-radius: 5px 5px 0 0;
+	position: sticky;
+	top: 0;
+}
+
+#sme-editor {
+	background-color: var(--sme-gray-5);
+	border: var(--sme-light-editor-border);
+	border-radius: 0 0 5px 5px;
+	border-top: 0;
+	color: var(--sme-gray-11);
+	height: 100vh;
+	line-height: var(--sme-lh);
+	font-family: "Space Mono", monospace; /* Mandatory to pretty print Markdown tables */
+	font-size: var(--sme-fs);
+	resize: none;
+}
+
+#sme-preview {
+	background-color: var(--sme-gray-5);
+	border: var(--sme-light-editor-border);
+	border-radius: 0 0 5px 5px;
+	border-top: 0;
+	color: var(--sme-gray-11);
+	height: 100vh;
+	overflow-y: auto;
+}
+
+/* BUTTONS GROUP*/
+buttons-group {
+	display: inline-block;
+	margin: 5px !important;
+}
+
+/* SME DROPDOWN */
+sme-dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+sme-dropdown > input {
+	height: 0;
+	margin: 0;
+	opacity: 0;
+	width: 0;
+}
+
+sme-dropdown > label {
+	cursor: pointer;
+	display: block;
+	background: var(--sme-gray-9); /* Opt */
+	border: 2px solid var(--sme-gray-9); /* Opt */
+	border-radius: var(--sme-br); /* Opt */
+}
+
+sme-dropdown > label:hover {
+	background: var(--sme-gray-1); /* Opt */
+	color: var(--sme-gray-9); /* Opt */
+}
+
+sme-dropdown > input:focus + label {
+	outline: solid red 5px;
+	border-radius: var(--sme-br);
+}
+
+sme-dropdown > label::after {
+	content: "▲";
+	vertical-align: super;
+}
+
+sme-dropdown > input:checked + label::after {
+	content: "▼";
+}
+
+sme-dropdown-content {
+	position: absolute;
+	background-color: var(--sme-gray-4);
+	border-radius: var(--sme-br);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	color: var(--sme-gray-10);
+	/* margin-left: 15px; */
+	min-width: 100%;
+	z-index: 1;
+}
+
+sme-dropdown > input:checked + label + sme-dropdown-content {
+	display: grid;
+	gap: 15px;
+	padding: 15px;
+}
+
+/* SME MARKDOWN BUTTON */
+.sme-md-btn {
+	background: var(--sme-gray-9);
+	border: 2px solid var(--sme-gray-9);
+	border-radius: var(--sme-br);
+	color: var(--sme-gray-1);
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px;
+	position: relative;
+	transition: all 0.3s ease;
+	/* outline: none; */
+}
+.sme-md-btn:hover,
+.sme-md-btn:active,
+.sme-md-btn:focus {
+	background: var(--sme-gray-1);
+	color: var(--sme-gray-9);
+}
+
+.sme-md-btn[data-syntax="heading1"] {
+	font-size: xx-large;
+}
+.sme-md-btn[data-syntax="heading2"] {
+	font-size: larger;
+}
+.sme-md-btn[data-syntax="heading3"] {
+	font-size: x-large;
+}
+.sme-md-btn[data-syntax="heading4"] {
+	font-size: large;
+}
+.sme-md-btn[data-syntax="heading5"] {
+	font-size: medium;
+}
+
+.sme-md-btn[data-syntax="bold"] {
+	font-weight: bold;
+}
+.sme-md-btn[data-syntax="italic"] {
+	font-style: italic;
+}
+.sme-md-btn[data-syntax="underline"] {
+	text-decoration: underline;
+}
+.sme-md-btn[data-syntax="strikethrough"] {
+	text-decoration: line-through;
+}
+
+/* SWEET ALERT */
+div:where(.swal2-container) div:where(.swal2-popup) {
+	background-color: var(--sme-gray-10) !important;
+	color: var(--sme-gray-4) !important;
+}
+div:where(.swal2-container) input:where(.swal2-input) {
+	margin: 3px 2em 1em !important;
+}
+div:where(.swal2-container) input:where(.swal2-input)::placeholder {
+	color: var(--sme-gray-4);
+}
+
+/* TABLE FOR ALERT AND PREVIEW */
+table {
+	border-collapse: collapse; /* Remove spacing between cells */
+	width: 100%; /* Full width */
+}
+
+th,
+td {
+	padding: 8px; /* Add padding around text */
+	border: 1px solid var(--sme-gray-4); /* Add a light gray border */
+}
+
+th {
+	background-color: var(--sme-gray-11); /* Dark gray background for headers */
+	font-weight: bold; /* Bold text for headers */
+}
+
+tr:nth-child(even) {
+	/* Even rows */
+	background-color: var(--sme-gray-9); /* Darker gray background for even rows */
+}
+
+#sme-preview th,
+#sme-preview td {
+	border: 2px solid var(--sme-gray-1);
+}
+
+#sme-preview > table th {
+	color: var(--sme-gray-4);
+}
+
+#sme-preview > table tr:nth-child(even) {
+	/* Even rows */
+	color: var(--sme-gray-4); /* Lighter gray background for even rows */
+}
