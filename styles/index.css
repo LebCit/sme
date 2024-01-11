@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap");
 
 :root {
 	--sme-br: 5px;
@@ -42,7 +42,7 @@ sme-view-toolbar {
 	color: var(--sme-gray-11);
 	height: 100vh;
 	line-height: var(--sme-lh);
-	font-family: "Space Mono", monospace; /* Mandatory to pretty print Markdown tables */
+	font-family: "Martian Mono", monospace; /* Monospaced font is mandatory to pretty print Markdown tables */
 	font-size: var(--sme-fs);
 	resize: none;
 }
@@ -55,6 +55,10 @@ sme-view-toolbar {
 	color: var(--sme-gray-11);
 	height: 100vh;
 	overflow-y: auto;
+}
+
+#sme-preview a {
+	color: #043c88;
 }
 
 /* BUTTONS GROUP*/
