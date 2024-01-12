@@ -216,10 +216,57 @@ tr:nth-child(even) {
 }
 
 #sme-preview > table th {
-	color: var(--sme-gray-4);
+	color: var(--sme-gray-4); /* Light gray text color for headers */
+}
+
+#sme-preview > table th a {
+	color: var(--sme-gray-4); /* Light gray anchor color for headers */
 }
 
 #sme-preview > table tr:nth-child(even) {
 	/* Even rows */
-	color: var(--sme-gray-4); /* Lighter gray background for even rows */
+	color: var(--sme-gray-4); /* Light gray text color for even rows */
+}
+
+#sme-preview > table tr:nth-child(even) a {
+	/* Even rows */
+	color: var(--sme-gray-4); /* Light gray anchor color for even rows */
+}
+
+@media (max-width: 1023.98px) {
+	main > input,
+	sme-write > label {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	main > label {
+		background-color: var(--sme-gray-11);
+		border-radius: var(--sme-br);
+		cursor: pointer;
+		padding: 5px;
+	}
+
+	main > input:checked + label {
+		background-color: var(--sme-gray-4);
+		color: var(--sme-gray-11);
+		font-weight: bold;
+		outline: 5px solid red;
+	}
+
+	sme-write,
+	sme-view {
+		display: none !important;
+	}
+
+	#sme-write-tab:checked ~ sme-write,
+	#sme-view-tab:checked ~ sme-view {
+		display: inherit !important;
+		grid-column: span 3;
+	}
 }
