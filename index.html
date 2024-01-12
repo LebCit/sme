@@ -16,6 +16,8 @@
 			<input data-lg="hide" type="radio" name="sme-tabs" id="sme-view-tab" />
 			<label data-sm="show left" data-lg="hide" for="sme-view-tab">Markdown Preview</label>
 
+			<sme-write data-sm="1column">
+				<label data-lg="left" for="sme-editor">Markdown Editor</label>
 
 				<sme-write-toolbar>
 					<!-- UNDO / REDO -->
@@ -559,8 +561,8 @@
 				<textarea id="sme-editor" data-sm="pad"></textarea>
 			</sme-write>
 
-			<sme-view data-lg="1column">
-				<label for="sme-preview">Markdown Preview</label>
+			<sme-view data-sm="1column">
+				<label data-sm="hide" data-lg="show left" for="sme-preview">Markdown Preview</label>
 				<sme-view-toolbar data-sm="1column">
 					<!-- HTML / MARKDOWN -->
 					<buttons-group>
