@@ -9,9 +9,13 @@
 		<link rel="preload" href="/styles/index.css" as="style" onload="this.rel = 'stylesheet'" />
 	</head>
 	<body data-sm="1column">
-		<main data-sm="pad gap" data-lg="2column">
-			<sme-write data-lg="1column">
-				<label data-sm="left" for="sme-editor">Markdown Editor</label>
+		<main data-sm="3column pad gap" data-lg="2column">
+			<input data-lg="hide" type="radio" name="sme-tabs" id="sme-write-tab" checked />
+			<label data-sm="show left" data-lg="hide" for="sme-write-tab">Markdown Editor</label>
+
+			<input data-lg="hide" type="radio" name="sme-tabs" id="sme-view-tab" />
+			<label data-sm="show left" data-lg="hide" for="sme-view-tab">Markdown Preview</label>
+
 
 				<sme-write-toolbar>
 					<!-- UNDO / REDO -->
