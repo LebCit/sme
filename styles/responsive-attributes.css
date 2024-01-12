@@ -20,7 +20,7 @@ https://matthewjamestaylor.com/responsive-attributes
 }
 
 /* responsive image */
-[data-sm*="riz"] {
+[data-sm*="rspImg"] {
 	width: 100%;
 	height: auto;
 	border: dashed;
