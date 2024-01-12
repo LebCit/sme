@@ -207,7 +207,7 @@ th {
 
 tr:nth-child(even) {
 	/* Even rows */
-	background-color: var(--sme-gray-9); /* Darker gray background for even rows */
+	background-color: var(--sme-gray-9); /* Lighter dark gray background for even rows */
 }
 
 #sme-preview th,
