@@ -2,6 +2,7 @@
 	--sme-br: 5px;
 	--sme-ff: Verdana, Geneva, Tahoma, sans-serif;
 	--sme-fs: calc(15px + 0.390625vw);
+	--sme-gff: "Martian Mono", monospace;
 	--sme-gray-1: #fcfcfd;
 	--sme-gray-2: #f8fafc;
 	--sme-gray-3: #eef2f6;
@@ -58,7 +59,7 @@ sme-view-toolbar {
 	color: var(--sme-gray-11);
 	height: 100vh;
 	line-height: var(--sme-lh);
-	font-family: "Martian Mono", monospace; /* Monospaced font is mandatory to pretty print Markdown tables */
+	font-family: var(--sme-gff); /* Monospaced font is mandatory to pretty print Markdown tables */
 	font-size: var(--sme-fs);
 	resize: none;
 }
