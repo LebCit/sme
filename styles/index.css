@@ -37,7 +37,8 @@ header > h1 {
 	font-style: italic;
 }
 
-header > img {
+header > a {
+	display: inherit;
 	width: 40px;
 }
 
