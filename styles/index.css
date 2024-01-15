@@ -114,8 +114,8 @@ sme-dropdown > label:hover {
 }
 
 sme-dropdown > input:focus + label {
-	outline: solid red 5px;
 	border-radius: var(--sme-br);
+	outline: solid red 2.5px;
 }
 
 sme-dropdown > label::after {
@@ -155,7 +155,6 @@ sme-dropdown > input:checked + label + sme-dropdown-content {
 	padding: 5px;
 	position: relative;
 	transition: all 0.3s ease;
-	/* outline: none; */
 }
 .sme-md-btn:hover,
 .sme-md-btn:active,
@@ -304,7 +303,6 @@ footer-copyright > sme-logo > sme-logo-text > span:nth-child(5) {
 		border: 2.5px solid red;
 		color: var(--sme-gray-11);
 		font-weight: bold;
-		outline: 5px solid red;
 	}
 
 	sme-write,
