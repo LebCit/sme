@@ -9,7 +9,7 @@ export const handleTable = async (editor, handleInput) => {
 	const selectedText = editor.value.substring(selectionStart, selectionEnd)
 
 	const { value: tableValues } = await Swal.fire({
-		title: "Create a table",
+		title: selectedText ? "Update table" : "Create a table",
 		html: tableHTML(selectedText),
 		grow: "row", // popup should grow to fill the available width.
 		allowOutsideClick: false, // user can't dismiss the popup by clicking outside it.
@@ -31,7 +31,7 @@ export const handleTable = async (editor, handleInput) => {
 			return convertTableToMarkdown("sme-table-element")
 		},
 		confirmButtonColor: "var(--sme-gray-9)",
-		confirmButtonText: "Insert table",
+		confirmButtonText: selectedText ? "Update table" : "Insert table",
 	})
 
 	if (tableValues) {
