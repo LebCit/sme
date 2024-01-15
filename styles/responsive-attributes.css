@@ -8,8 +8,7 @@ https://matthewjamestaylor.com/responsive-attributes
 
 [data-sm],
 [data-md],
-[data-lg],
-[data-xl] {
+[data-lg] {
 	/* padding */
 	--pad: calc(8px + 1.5625vw);
 	--pad2: calc(var(--pad) * 2);
@@ -38,8 +37,7 @@ https://matthewjamestaylor.com/responsive-attributes
 /* default to one column */
 [data-sm*="column"],
 [data-md*="column"],
-[data-lg*="column"],
-[data-xl*="column"] {
+[data-lg*="column"] {
 	display: grid;
 	grid-template-columns: 1fr;
 	margin: 0;
@@ -48,22 +46,19 @@ https://matthewjamestaylor.com/responsive-attributes
 /* remove leading/trailing margins on columns */
 [data-sm*="column"] > *,
 [data-md*="column"] > *,
-[data-lg*="column"] > *,
-[data-xl*="column"] > * {
+[data-lg*="column"] > * {
 	margin: 0;
 }
 
 /* remove leading/trailing margins on content within columns */
 [data-sm*="column"] > * > :first-child,
 [data-md*="column"] > * > :first-child,
-[data-lg*="column"] > * > :first-child,
-[data-xl*="column"] > * > :first-child {
+[data-lg*="column"] > * > :first-child {
 	margin-top: 0;
 }
 [data-sm*="column"] > * > :last-child,
 [data-md*="column"] > * > :last-child,
-[data-lg*="column"] > * > :last-child,
-[data-xl*="column"] > * > :last-child {
+[data-lg*="column"] > * > :last-child {
 	margin-bottom: 0;
 }
 
@@ -562,176 +557,6 @@ https://matthewjamestaylor.com/responsive-attributes
 		text-align: center;
 	}
 	[data-lg~="textR"] {
-		text-align: right;
-	}
-}
-
-@media (min-width: 1280px) {
-	/* hide element */
-	[data-xl*="hide"] {
-		display: none;
-	}
-	/* show element */
-	[data-xl*="show"] {
-		display: block;
-	}
-
-	/* extra large desktop padding */
-	[data-xl~="pad"] {
-		padding: var(--pad);
-	}
-	[data-xl~="pad2"] {
-		padding: var(--pad2);
-	}
-
-	[data-xl] > [data-xl~="noPad"],
-	[data-xl~="noPad"] {
-		padding: 0;
-	}
-
-	[data-xl~="childPad"] > * {
-		padding: var(--pad);
-	}
-	[data-xl~="childPad2"] > * {
-		padding: var(--pad2);
-	}
-
-	/* extra large desktop gutter */
-	[data-xl~="gap"] {
-		gap: var(--gap);
-	}
-	[data-xl~="gap2"] {
-		gap: var(--gap2);
-	}
-
-	/* extra large desktop columns */
-	[data-xl~="1column"] {
-		grid-template-columns: 1fr;
-	}
-	[data-xl~="2column"] {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	[data-xl~="3column"] {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	[data-xl~="4column"] {
-		grid-template-columns: repeat(4, 1fr);
-	}
-	[data-xl~="5column"] {
-		grid-template-columns: repeat(5, 1fr);
-	}
-	[data-xl~="6column"] {
-		grid-template-columns: repeat(6, 1fr);
-	}
-	[data-xl~="7column"] {
-		grid-template-columns: repeat(7, 1fr);
-	}
-	[data-xl~="8column"] {
-		grid-template-columns: repeat(8, 1fr);
-	}
-
-	/* extra large desktop column spans */
-	[data-xl~="colSpan2"] {
-		grid-column: span 2;
-	}
-	[data-xl~="colSpan3"] {
-		grid-column: span 3;
-	}
-	[data-xl~="colSpan4"] {
-		grid-column: span 4;
-	}
-	[data-xl~="colSpan5"] {
-		grid-column: span 5;
-	}
-	[data-xl~="colSpan6"] {
-		grid-column: span 6;
-	}
-	[data-xl~="colSpan7"] {
-		grid-column: span 7;
-	}
-	[data-xl~="colSpan8"] {
-		grid-column: span 8;
-	}
-
-	/* extra large desktop row spans */
-	[data-xl~="rowSpan2"] {
-		grid-row: span 2;
-	}
-	[data-xl~="rowSpan3"] {
-		grid-row: span 3;
-	}
-	[data-xl~="rowSpan4"] {
-		grid-row: span 4;
-	}
-	[data-xl~="rowSpan5"] {
-		grid-row: span 5;
-	}
-	[data-xl~="rowSpan6"] {
-		grid-row: span 6;
-	}
-	[data-xl~="rowSpan7"] {
-		grid-row: span 7;
-	}
-	[data-xl~="rowSpan8"] {
-		grid-row: span 8;
-	}
-
-	/* extra large desktop order */
-	[data-xl~="order1"] {
-		order: -8;
-	}
-	[data-xl~="order2"] {
-		order: -7;
-	}
-	[data-xl~="order3"] {
-		order: -6;
-	}
-	[data-xl~="order4"] {
-		order: -5;
-	}
-	[data-xl~="order5"] {
-		order: -4;
-	}
-	[data-xl~="order6"] {
-		order: -3;
-	}
-	[data-xl~="order7"] {
-		order: -2;
-	}
-	[data-xl~="order8"] {
-		order: -1;
-	}
-
-	/* extra large desktop horizontal align */
-	[data-xl~="left"] {
-		justify-self: start;
-	}
-	[data-xl~="center"] {
-		justify-self: center;
-	}
-	[data-xl~="right"] {
-		justify-self: end;
-	}
-
-	/* extra large desktop vertical align */
-	[data-xl~="top"] {
-		align-self: top;
-	}
-	[data-xl~="middle"] {
-		align-self: center;
-	}
-	[data-xl~="bottom"] {
-		align-self: bottom;
-	}
-
-	/* extra large desktop text align */
-	[data-xl~="textL"] {
-		text-align: left;
-	}
-	[data-xl~="textC"] {
-		text-align: center;
-	}
-	[data-xl~="textR"] {
 		text-align: right;
 	}
 }
