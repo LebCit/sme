@@ -1,3 +1,5 @@
+import { marked } from "https://cdn.jsdelivr.net/npm/marked@11.1.1/+esm"
+import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@3.0.8/+esm"
 import UndoManager from "https://cdn.jsdelivr.net/npm/undo-manager@1.1.1/+esm"
 
 // Function to set up the Markdown preview functionality
@@ -21,7 +23,7 @@ export const initializeMarkdownPreview = (editor, preview) => {
 	// Function to update the preview
 	const updatePreview = (markdownContent) => {
 		try {
-			preview.innerHTML = marked.parse(markdownContent)
+			preview.innerHTML = DOMPurify.sanitize(marked.parse(markdownContent))
 		} catch (error) {
 			console.error("Error parsing Markdown:", error.message)
 			// Handle the error (e.g., display a user-friendly message in the UI)
@@ -40,7 +42,7 @@ export const initializeMarkdownPreview = (editor, preview) => {
 
 	// Function to show the parsed Markdown to HTML
 	const showMarkdownPreview = () => {
-		preview.innerHTML = marked.parse(editor.value) // Parse the Markdown again to ensure fresh rendering
+		preview.innerHTML = DOMPurify.sanitize(marked.parse(editor.value)) // Parse the Markdown again to ensure fresh rendering
 		markdownBtn.closest("sme-dropdown").firstElementChild.checked = false
 		// Optionally, update button states or styling to indicate the current preview mode
 	}
@@ -113,10 +115,10 @@ export const initializeMarkdownPreview = (editor, preview) => {
 		if (event.ctrlKey) {
 			if (event.key === "z") {
 				undo()
-				event.preventDefault() // Prevent the default browser behavior for Ctrl+Z and Ctrl+Y
+				event.preventDefault() // Prevent the default browser behavior for Ctrl+Z
 			} else if (event.key === "y") {
 				redo()
-				event.preventDefault() // Prevent the default browser behavior for Ctrl+Z and Ctrl+Y
+				event.preventDefault() // Prevent the default browser behavior for Ctrl+Y
 			}
 			//event.preventDefault() // Prevent the default browser behavior for Ctrl+Z and Ctrl+Y
 		}
