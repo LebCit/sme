@@ -12,7 +12,7 @@ export const keyBoardShortcuts = (editor, handleInput) => {
 		d: "inlineCode", // Applies inline code formatting.
 		k: "blocOfCode", // Applies bloc of code formatting.
 		l: "link", // Adds a link.
-		i: "image", // Adds an image.
+		I: "image", // Adds an image.
 		T: "table", // Inserts a table.
 		X: "clear", // Clears the editor's content.
 	}
