@@ -1,5 +1,5 @@
 import { manageTable } from "./manageTable.js"
-import { prettyPrint } from "./mdTablePrettyPrint.js"
+import { prettyPrint } from "./prettyPrintMarkdownTable.js"
 import { convertTableToMarkdown } from "./convertTableToMarkdown.js"
 
 export const handleTable = async (editor, handleInput) => {
