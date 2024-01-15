@@ -293,6 +293,7 @@ footer-copyright > sme-logo > sme-logo-text > span:nth-child(5) {
 
 	main > label {
 		background-color: var(--sme-gray-11);
+		border: var(--sme-gray-7) 1px solid;
 		border-radius: var(--sme-br);
 		cursor: pointer;
 		padding: 5px;
@@ -300,6 +301,7 @@ footer-copyright > sme-logo > sme-logo-text > span:nth-child(5) {
 
 	main > input:checked + label {
 		background-color: var(--sme-gray-4);
+		border: 2.5px solid red;
 		color: var(--sme-gray-11);
 		font-weight: bold;
 		outline: 5px solid red;
