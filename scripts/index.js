@@ -3,12 +3,14 @@ import { handleDropdownToggle } from "./functions/handleDropdownToggle.js"
 import { copyHTMLToClipboard } from "./functions/copyHTMLToClipboard.js"
 import { setupButtonListeners } from "./functions/buttonListeners.js"
 import { keyBoardShortcuts } from "./functions/keyBoardShortcuts.js"
+import { downloadHTML } from "./functions/downloadHTML.js"
 import { handleLists } from "./functions/handleLists.js"
 
 document.addEventListener("DOMContentLoaded", () => {
 	const editor = document.getElementById("sme-editor")
 	const preview = document.getElementById("sme-preview")
 	const buttons = document.querySelectorAll(".sme-md-btn")
+	const downloadHTMLButton = document.querySelector("[title='Download HTML']")
 
 	// Handle dropdown toggle
 	handleDropdownToggle(document, "sme-dropdown input")
@@ -28,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Copy preview HTML to to the system clipboard
 	copyHTMLToClipboard("button[aria-label='Copy HTML to clipboard']", "#sme-preview")
+
+	// Download HTML
+	downloadHTMLButton.addEventListener("click", async () => {
+		await downloadHTML(preview)
+		// Remove focus
+		downloadHTMLButton.blur()
+	})
 
 	returnedHandleInput()
 })
