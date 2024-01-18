@@ -54,7 +54,7 @@
 					<!-- UNDO / REDO -->
 					<buttons-group>
 						<!-- UNDO BUTTON -->
-						<button class="sme-md-btn" id="undoBtn" title="Undo - Ctrl+Z">
+						<button type="button" class="sme-md-btn" id="undoBtn" title="Undo - Ctrl+Z">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-arrow-back-up"
@@ -75,7 +75,7 @@
 						</button>
 
 						<!-- REDO BUTTON -->
-						<button class="sme-md-btn" id="redoBtn" title="Redo - Ctrl+Y">
+						<button type="button" class="sme-md-btn" id="redoBtn" title="Redo - Ctrl+Y">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-arrow-forward-up"
@@ -102,7 +102,7 @@
 						<sme-dropdown>
 							<input type="checkbox" id="sme-headings" />
 
-							<label for="sme-headings" aria-haspopup="true" aria-expanded="false" title="Headings">
+							<label for="sme-headings" aria-haspopup="true" title="Headings">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="icon icon-tabler icon-tabler-heading"
@@ -128,12 +128,12 @@
 							</label>
 
 							<sme-dropdown-content aria-labelledby="sme-headings" data-sm="hide">
-								<button class="sme-md-btn" data-syntax="heading1">H1</button>
-								<button class="sme-md-btn" data-syntax="heading2">H2</button>
-								<button class="sme-md-btn" data-syntax="heading3">H3</button>
-								<button class="sme-md-btn" data-syntax="heading4">H4</button>
-								<button class="sme-md-btn" data-syntax="heading5">H5</button>
-								<button class="sme-md-btn" data-syntax="heading6">H6</button>
+								<button type="button" class="sme-md-btn" data-syntax="heading1">H1</button>
+								<button type="button" class="sme-md-btn" data-syntax="heading2">H2</button>
+								<button type="button" class="sme-md-btn" data-syntax="heading3">H3</button>
+								<button type="button" class="sme-md-btn" data-syntax="heading4">H4</button>
+								<button type="button" class="sme-md-btn" data-syntax="heading5">H5</button>
+								<button type="button" class="sme-md-btn" data-syntax="heading6">H6</button>
 							</sme-dropdown-content>
 						</sme-dropdown>
 
@@ -141,7 +141,7 @@
 						<sme-dropdown>
 							<input type="checkbox" id="sme-lists" />
 
-							<label for="sme-lists" aria-haspopup="true" aria-expanded="false" title="Lists">
+							<label for="sme-lists" aria-haspopup="true" title="Lists">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="icon icon-tabler icon-tabler-letter-l"
@@ -162,7 +162,7 @@
 
 							<sme-dropdown-content aria-labelledby="sme-lists" data-sm="hide">
 								<!-- BULLETED LIST BUTTON -->
-								<button class="sme-md-btn" data-syntax="bulleted" title="Bulleted List">
+								<button type="button" class="sme-md-btn" data-syntax="bulleted" title="Bulleted List">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-list"
@@ -187,7 +187,7 @@
 								</button>
 
 								<!-- NUMBERED LIST BUTTON -->
-								<button class="sme-md-btn" data-syntax="numbered" title="Numbered List">
+								<button type="button" class="sme-md-btn" data-syntax="numbered" title="Numbered List">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-list-numbers"
@@ -212,6 +212,7 @@
 
 								<!-- MULTI LEVEL BULLETED LIST BUTTON -->
 								<button
+									type="button"
 									class="sme-md-btn"
 									data-syntax="bulletedMultiLevel"
 									title="MULTI LEVEL BULLETED LIST"
@@ -241,6 +242,7 @@
 
 								<!-- MULTI LEVEL NUMBERED LIST BUTTON -->
 								<button
+									type="button"
 									class="sme-md-btn"
 									data-syntax="numberedMultiLevel"
 									title="MULTI LEVEL NUMBERED LIST"
@@ -269,7 +271,7 @@
 								</button>
 
 								<!-- TODO LIST BUTTON -->
-								<button class="sme-md-btn" data-syntax="todo" title="TODO List">
+								<button type="button" class="sme-md-btn" data-syntax="todo" title="TODO List">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-list-check"
@@ -299,7 +301,7 @@
 					<!-- BOLD / ITALIC / UNDERLINE / STRIKETHROUGH -->
 					<buttons-group>
 						<!-- BOLD BUTTON -->
-						<button class="sme-md-btn" data-syntax="bold" title="Bold - Ctrl+B">
+						<button type="button" class="sme-md-btn" data-syntax="bold" title="Bold - Ctrl+B">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-bold"
@@ -320,7 +322,7 @@
 						</button>
 
 						<!-- ITALIC BUTTON -->
-						<button class="sme-md-btn" data-syntax="italic" title="Italic - Ctrl+I">
+						<button type="button" class="sme-md-btn" data-syntax="italic" title="Italic - Ctrl+I">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-italic"
@@ -342,7 +344,7 @@
 						</button>
 
 						<!-- UNDERLINE BUTTON -->
-						<button class="sme-md-btn" data-syntax="underline" title="Underline - Ctrl+U">
+						<button type="button" class="sme-md-btn" data-syntax="underline" title="Underline - Ctrl+U">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-underline"
@@ -363,7 +365,12 @@
 						</button>
 
 						<!-- STRIKETHROUGH BUTTON -->
-						<button class="sme-md-btn" data-syntax="strikethrough" title="Strikethrough - Ctrl+S">
+						<button
+							type="button"
+							class="sme-md-btn"
+							data-syntax="strikethrough"
+							title="Strikethrough - Ctrl+S"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-strikethrough"
@@ -389,7 +396,7 @@
 					<!-- LINK / IMAGE -->
 					<buttons-group>
 						<!-- LINK BUTTON -->
-						<button class="sme-md-btn" data-syntax="link" title="Link - Ctrl+L">
+						<button type="button" class="sme-md-btn" data-syntax="link" title="Link - Ctrl+L">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-link"
@@ -413,7 +420,7 @@
 						</button>
 
 						<!-- LINK BUTTON -->
-						<button class="sme-md-btn" data-syntax="image" title="Image - Ctrl+Shift+I">
+						<button type="button" class="sme-md-btn" data-syntax="image" title="Image - Ctrl+Shift+I">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-photo"
@@ -441,7 +448,12 @@
 					<!-- LINE BREAK / BLOCKQUOTE / TABLE -->
 					<buttons-group>
 						<!-- LINE BREAK BUTTON -->
-						<button class="sme-md-btn" data-syntax="horizontalRule" title="Horizontal Rule - Ctrl+H">
+						<button
+							type="button"
+							class="sme-md-btn"
+							data-syntax="horizontalRule"
+							title="Horizontal Rule - Ctrl+H"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-line-dashed"
@@ -463,7 +475,7 @@
 						</button>
 
 						<!-- BLOCKQUOTE BUTTON -->
-						<button class="sme-md-btn" data-syntax="blockquote" title="Blockquote - Ctrl+Q">
+						<button type="button" class="sme-md-btn" data-syntax="blockquote" title="Blockquote - Ctrl+Q">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-blockquote"
@@ -488,7 +500,7 @@
 						</button>
 
 						<!-- TABLE BUTTON -->
-						<button class="sme-md-btn" data-syntax="table" title="Table - Ctrl+Shift+T">
+						<button type="button" class="sme-md-btn" data-syntax="table" title="Table - Ctrl+Shift+T">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-table"
@@ -515,7 +527,7 @@
 					<!-- CODE -->
 					<buttons-group>
 						<!-- INLINE CODE BUTTON -->
-						<button class="sme-md-btn" data-syntax="inlineCode" title="Inline code - Ctrl+D">
+						<button type="button" class="sme-md-btn" data-syntax="inlineCode" title="Inline code - Ctrl+D">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-code"
@@ -537,7 +549,7 @@
 						</button>
 
 						<!-- BLOC OF CODE BUTTON -->
-						<button class="sme-md-btn" data-syntax="blocOfCode" title="Bloc of code - Ctrl+K">
+						<button type="button" class="sme-md-btn" data-syntax="blocOfCode" title="Bloc of code - Ctrl+K">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-code-dots"
@@ -564,7 +576,12 @@
 					<!-- CLEAR -->
 					<buttons-group>
 						<!-- CLEAR BUTTON -->
-						<button class="sme-md-btn" data-syntax="clear" title="Clear Editor - Ctrl+Shift+X">
+						<button
+							type="button"
+							class="sme-md-btn"
+							data-syntax="clear"
+							title="Clear Editor - Ctrl+Shift+X"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-trash"
@@ -593,7 +610,7 @@
 			</sme-write>
 
 			<sme-view data-sm="1column">
-				<label data-sm="hide" data-lg="show left" for="sme-preview">HTML Preview</label>
+				<span data-sm="hide" data-lg="show left">HTML Preview</span>
 				<sme-view-toolbar data-sm="1column">
 					<!-- HTML / MARKDOWN / COPY / DOWNLOAD -->
 					<buttons-group>
@@ -601,7 +618,7 @@
 						<sme-dropdown>
 							<input type="checkbox" id="sme-view-output" />
 
-							<label for="sme-view-output" aria-haspopup="true" aria-expanded="false" title="Preview">
+							<label for="sme-view-output" aria-haspopup="true" title="Preview">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="icon icon-tabler icon-tabler-eye"
@@ -625,7 +642,7 @@
 
 							<sme-dropdown-content aria-labelledby="sme-view-output" data-sm="hide">
 								<!-- HTML BUTTON -->
-								<button id="html-preview" class="sme-md-btn" title="Raw HTML">
+								<button id="html-preview" type="button" class="sme-md-btn" title="Raw HTML">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-html"
@@ -651,7 +668,7 @@
 								</button>
 
 								<!-- MARKDOWN BUTTON -->
-								<button id="markdown-preview" class="sme-md-btn" title="Parsed Markdown">
+								<button id="markdown-preview" type="button" class="sme-md-btn" title="Parsed Markdown">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-markdown"
@@ -677,7 +694,7 @@
 						</sme-dropdown>
 
 						<!-- COPY BUTTON -->
-						<button class="sme-md-btn" title="Copy HTML" aria-label="Copy HTML to clipboard">
+						<button type="button" class="sme-md-btn" title="Copy HTML" aria-label="Copy HTML to clipboard">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-copy"
@@ -702,7 +719,7 @@
 						</button>
 
 						<!-- DOWNLOAD BUTTON -->
-						<button class="sme-md-btn" title="Download HTML">
+						<button type="button" class="sme-md-btn" title="Download HTML">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="icon icon-tabler icon-tabler-file-download"
@@ -732,7 +749,7 @@
 							href="https://blog-doc.pages.dev/docs/write-content-with-markdown-in-blog-doc/"
 							target="_blank"
 						>
-							<button class="sme-md-btn" title="Help">
+							<button type="button" class="sme-md-btn" title="Help">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="icon icon-tabler icon-tabler-info-square-rounded"
@@ -763,7 +780,6 @@
 			<footer-copyright data-sm="center textC">
 				<sme-logo data-sm="2column">
 					<a href="/"><img src="/img/sme-logo.svg" alt="Simple Markdown Editor Logo" /></a>
-					
 
 					<sme-logo-text data-sm="middle">
 						<span>Simple</span>
