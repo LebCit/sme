@@ -1,18 +1,20 @@
 /**
- * Copies the HTML content of a specified preview element to the system clipboard when a button is clicked.
+ * Copies the content of a specified element to the system clipboard when a button is clicked.
  * Provides visual feedback to the user upon success or failure.
  *
  * @param {string} copyButtonSelector - CSS selector for the copy button element.
- * @param {string} previewSelector - CSS selector for the preview element containing the HTML to copy.
- * @param {string} [successMessage="HTML Successfully Copied!"] - Optional message to display upon successful copy.
- * @param {string} [failureMessage="Failed to copy HTML from preview!"] - Optional message to display upon failure of copy.
+ * @param {string} sectionSelector - CSS selector for the editor/preview element containing the text to copy.
+ * @param {string} successMessage - Optional message to display upon successful copy.
+ * @param {string} failureMessage - Optional message to display upon failure of copy.
  * @param {number} [timerDuration=1500] - Optional duration in milliseconds for the success message to display.
  */
-export const copyHTMLToClipboard = (
+export const copyToClipboard = (
 	copyButtonSelector,
-	previewSelector,
-	successMessage = "HTML Successfully Copied!",
-	failureMessage = "Failed to copy HTML from preview!",
+	sectionSelector,
+	successMessage = sectionSelector === "#sme-editor" ? "Markdown Successfully Copied!" : "HTML Successfully Copied!",
+	failureMessage = sectionSelector === "#sme-editor"
+		? "Failed to copy Markdown from preview!"
+		: "Failed to copy HTML from preview!",
 	timerDuration = 1500
 ) => {
 	/**
@@ -36,14 +38,14 @@ export const copyHTMLToClipboard = (
 	}
 
 	// Validate input selectors
-	if (!isValidCSSSelector(copyButtonSelector) || !isValidCSSSelector(previewSelector)) {
+	if (!isValidCSSSelector(copyButtonSelector) || !isValidCSSSelector(sectionSelector)) {
 		console.error("Invalid CSS selectors provided for copy button or preview element.")
 		return
 	}
 
 	// Get references to HTML elements
 	const copyButton = document.querySelector(copyButtonSelector)
-	const previewElement = document.querySelector(previewSelector)
+	const sectionElement = document.querySelector(sectionSelector)
 
 	// Check for clipboard API compatibility and provide a fallback
 	if (!navigator.clipboard) {
@@ -55,8 +57,13 @@ export const copyHTMLToClipboard = (
 	// Attach a click event listener to the button
 	copyButton.addEventListener("click", async () => {
 		try {
-			// Copy the preview HTML to the system clipboard
-			await navigator.clipboard.writeText(previewElement.innerHTML)
+			// Copy the editor Markdown / preview HTML to the system clipboard
+			copyButton.id === "copy-markdown"
+				? await navigator.clipboard.writeText(sectionElement.value)
+				: await navigator.clipboard.writeText(sectionElement.innerHTML)
+
+			// Close the dropdown
+			copyButton.closest("sme-dropdown").firstElementChild.checked = false
 
 			// Display a customizable success message with auto close timer to the user
 			Swal.fire({
