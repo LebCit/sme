@@ -3,14 +3,14 @@ import { handleDropdownToggle } from "./functions/handleDropdownToggle.js"
 import { setupButtonListeners } from "./functions/buttonListeners.js"
 import { keyBoardShortcuts } from "./functions/keyBoardShortcuts.js"
 import { copyToClipboard } from "./functions/copyToClipboard.js"
-import { downloadHTML } from "./functions/downloadHTML.js"
+import { downloadContent } from "./functions/downloadContent.js"
 import { handleLists } from "./functions/handleLists.js"
 
 document.addEventListener("DOMContentLoaded", () => {
 	const editor = document.getElementById("sme-editor")
 	const preview = document.getElementById("sme-preview")
 	const buttons = document.querySelectorAll(".sme-md-btn")
-	const downloadHTMLButton = document.querySelector("[title='Download HTML']")
+	const downloadButtons = document.querySelectorAll(".download-btn")
 
 	// Handle dropdown toggle
 	handleDropdownToggle(document, "sme-dropdown input")
@@ -32,11 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	copyToClipboard("#copy-markdown", "#sme-editor")
 	copyToClipboard("#copy-html", "#sme-preview")
 
-	// Download HTML
-	downloadHTMLButton.addEventListener("click", async () => {
-		await downloadHTML(preview)
-		// Remove focus
-		downloadHTMLButton.blur()
+	// Download HTML/Markdown
+	downloadButtons.forEach((btn) => {
+		btn.addEventListener("click", async () => {
+			btn.title === "Download HTML" ? await downloadContent(preview, false) : await downloadContent(editor, true)
+
+			// Remove focus
+			btn.blur()
+		})
 	})
 
 	returnedHandleInput()
