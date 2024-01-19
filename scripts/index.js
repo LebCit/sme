@@ -1,8 +1,8 @@
 import { initializeMarkdownPreview } from "./functions/initializeMarkdownPreview.js"
 import { handleDropdownToggle } from "./functions/handleDropdownToggle.js"
-import { copyHTMLToClipboard } from "./functions/copyHTMLToClipboard.js"
 import { setupButtonListeners } from "./functions/buttonListeners.js"
 import { keyBoardShortcuts } from "./functions/keyBoardShortcuts.js"
+import { copyToClipboard } from "./functions/copyToClipboard.js"
 import { downloadHTML } from "./functions/downloadHTML.js"
 import { handleLists } from "./functions/handleLists.js"
 
@@ -28,8 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const keyboardShortcutsListener = keyBoardShortcuts(editor, returnedHandleInput)
 	document.addEventListener("keydown", keyboardShortcutsListener)
 
-	// Copy preview HTML to to the system clipboard
-	copyHTMLToClipboard("button[aria-label='Copy HTML to clipboard']", "#sme-preview")
+	// Copy editor Markdown / preview HTML to the system clipboard
+	copyToClipboard("#copy-markdown", "#sme-editor")
+	copyToClipboard("#copy-html", "#sme-preview")
 
 	// Download HTML
 	downloadHTMLButton.addEventListener("click", async () => {
