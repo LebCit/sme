@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="SME documentation. Simple Markdown Editor documentation. Markdown editor and preview documentation."
+		/>
+
+		<link rel="shortcut icon" href="/img/sme-logo.svg" sizes="any" type="image/svg+xml" />
+		<title>SME | Documentation</title>
+
+		<link rel="preload" href="/styles/responsive-attributes.css" as="style" onload="this.rel = 'stylesheet'" />
+		<link rel="preload" href="/styles/docs.css" as="style" onload="this.rel = 'stylesheet'" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet" />
+	</head>
+	<body data-sm="1column gap">
+		<header data-sm="3column pad">
+			<a href="/"><img data-sm="left middle" src="/img/sme-logo.svg" alt="Simple Markdown Editor Logo" /></a>
+			<h1 data-sm="left middle" data-md="hide">SME</h1>
+			<h1 data-sm="left hide middle" data-md="show">Simple Markdown Editor</h1>
+			<github-logo data-sm="left middle">
+				<a
+					href="https://github.com/LebCit/sme"
+					title="Link to GitHub repository"
+					target="_blank"
+					rel="external noopener noreferrer"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="icon icon-tabler icon-tabler-brand-github"
+						width="40"
+						height="40"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="var(--sme-gray-1)"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<title>Link to GitHub repository</title>
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path
+							d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+						/>
+					</svg>
+				</a>
+			</github-logo>
+		</header>
+
+		<main data-sm="1column pad gap">
+			<sme-docs-intro>
+				<h1>SME Documentation</h1>
+
+				<p>
+					Welcome to SME documentation page!
+					<br />
+					While SME is easy and straightforward, this page will walk you through the usage of its
+					functionalities.
+				</p>
+
+				<p>
+					If you need a simple but detailed tutorial on Markdown syntax, visit
+					<a
+						title="Markdown page of Blog-Doc"
+						href="https://blog-doc.pages.dev/docs/write-content-with-markdown-in-blog-doc/"
+						target="_blank"
+						rel="external noopener noreferrer"
+					>
+						Blog-Doc's Markdown page
+					</a>
+					.
+				</p>
+
+				<p>
+					<em>
+						Nota bene: Thanks to the awesome
+						<a
+							href="https://matthewjamestaylor.com/responsive-attributes"
+							target="_blank"
+							rel="external noopener noreferrer"
+						>
+							Responsive Attributes
+						</a>
+						, generously provided by
+						<a href="https://matthewjamestaylor.com/" target="_blank" rel="external noopener noreferrer">
+							Matthew James Taylor
+						</a>
+						, SME is fully responsive!
+					</em>
+				</p>
+			</sme-docs-intro>
+
+			<sme-docs-interface>
+				<h2>The Interface</h2>
+
+				<p>SME's interface is made of two blocks:</p>
+
+				<ol>
+					<li>The Markdown Editor</li>
+					<li>The HTML Preview</li>
+				</ol>
+
+				<p>Each block has a toolbar with some buttons, and each button holds a functionality.</p>
+
+				<p>
+					<em>
+						Nota bene: When the screen width is smaller than 1024 pixels, the interface turns into two tabs
+						which individually display the correspondent section when activated
+					</em>
+				</p>
+			</sme-docs-interface>
+
+			<sme-docs-editor data-sm="1column gap">
+				<h2>The Markdown Editor</h2>
+
+				<p>The Markdown Editor allows to type raw text using Markdown syntax and HTML if needed.</p>
+
+				<p>The first two buttons of the toolbar above the editor are:</p>
+
+				<sme-table-container>
+					<table>
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>Function</th>
+								<th>Shortcut</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-arrow-back-up"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Undo - Ctrl+Z</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M9 14l-4 -4l4 -4" />
+										<path d="M5 10h11a4 4 0 1 1 0 8h-1" />
+									</svg>
+								</td>
+								<td align="center">Undo</td>
+								<td align="center">Ctrl+Z</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-arrow-forward-up"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Redo - Ctrl+Y</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M15 14l4 -4l-4 -4" />
+										<path d="M19 10h-11a4 4 0 1 0 0 8h1" />
+									</svg>
+								</td>
+								<td align="center">Redo</td>
+								<td align="center">Ctrl+Y</td>
+							</tr>
+						</tbody>
+					</table>
+				</sme-table-container>
+
+				<hr />
+
+				<p>Those buttons allow to undo and redo, like in any editor, as their names suggest!</p>
+
+				<p>
+					After undo and redo, the toolbar above the editor offers the following buttons to insert Markdown
+					syntax in the editor:
+				</p>
+
+				<sme-table-container>
+					<table>
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>Syntax</th>
+								<th>Shortcut</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-heading"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Headings</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M7 12h10" />
+										<path d="M7 5v14" />
+										<path d="M17 5v14" />
+										<path d="M15 19h4" />
+										<path d="M15 5h4" />
+										<path d="M5 19h4" />
+										<path d="M5 5h4" />
+									</svg>
+								</td>
+								<td align="center">Headings</td>
+								<td align="center">none</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-letter-l"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Lists</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M7 4v16h10" />
+									</svg>
+								</td>
+								<td align="center">Lists</td>
+								<td align="center">none</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-bold"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Bold - Ctrl+B</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />
+										<path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" />
+									</svg>
+								</td>
+								<td align="center">Bold</td>
+								<td align="center">Ctrl+B</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-italic"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Italic - Ctrl+I</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M11 5l6 0" />
+										<path d="M7 19l6 0" />
+										<path d="M14 5l-4 14" />
+									</svg>
+								</td>
+								<td align="center">Italic</td>
+								<td align="center">Ctrl+I</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-underline"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Underline - Ctrl+U</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M7 5v5a5 5 0 0 0 10 0v-5" />
+										<path d="M5 19h14" />
+									</svg>
+								</td>
+								<td align="center">Underline</td>
+								<td align="center">Ctrl+U</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-strikethrough"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Strikethrough - Ctrl+S</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M5 12l14 0" />
+										<path
+											d="M16 6.5a4 2 0 0 0 -4 -1.5h-1a3.5 3.5 0 0 0 0 7h2a3.5 3.5 0 0 1 0 7h-1.5a4 2 0 0 1 -4 -1.5"
+										/>
+									</svg>
+								</td>
+								<td align="center">Strikethrough</td>
+								<td align="center">Ctrl+S</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-link"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Link - Ctrl+L</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M9 15l6 -6" />
+										<path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+										<path
+											d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+										/>
+									</svg>
+								</td>
+								<td align="center">Link</td>
+								<td align="center">Ctrl+L</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-photo"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Image - Ctrl+Shift+I</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M15 8h.01" />
+										<path
+											d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+										/>
+										<path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" />
+										<path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" />
+									</svg>
+								</td>
+								<td align="center">Image</td>
+								<td align="center">Ctrl+Shift+I</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-line-dashed"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Horizontal Rule - Ctrl+H</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M5 12h2" />
+										<path d="M17 12h2" />
+										<path d="M11 12h2" />
+									</svg>
+								</td>
+								<td align="center">Horizontal Rule</td>
+								<td align="center">Ctrl+H</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-blockquote"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Blockquote - Ctrl+Q</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M6 15h15" />
+										<path d="M21 19h-15" />
+										<path d="M15 11h6" />
+										<path d="M21 7h-6" />
+										<path d="M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" />
+										<path d="M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" />
+									</svg>
+								</td>
+								<td align="center">Blockquote</td>
+								<td align="center">Ctrl+Q</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-table"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Table - Ctrl+Shift+T</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path
+											d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z"
+										/>
+										<path d="M3 10h18" />
+										<path d="M10 3v18" />
+									</svg>
+								</td>
+								<td align="center">Table</td>
+								<td align="center">Ctrl+Shift+T</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-code"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Inline code - Ctrl+D</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M7 8l-4 4l4 4" />
+										<path d="M17 8l4 4l-4 4" />
+										<path d="M14 4l-4 16" />
+									</svg>
+								</td>
+								<td align="center">Inline code</td>
+								<td align="center">Ctrl+D</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-code-dots"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Block of code - Ctrl+K</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M15 12h.01" />
+										<path d="M12 12h.01" />
+										<path d="M9 12h.01" />
+										<path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2" />
+										<path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2" />
+									</svg>
+								</td>
+								<td align="center">Block of code</td>
+								<td align="center">Ctrl+K</td>
+							</tr>
+						</tbody>
+					</table>
+				</sme-table-container>
+
+				<hr />
+
+				<p>The headings and lists are drop-downs from which you can select the desired syntax to insert.</p>
+
+				<p>
+					It's possible to select a text then click on the button of the desired syntax or use the keyboard
+					shortcut for the desired syntax.
+				</p>
+
+				<p>
+					After inserting a table, it's possible to update the table by selecting it with the horizontal rule
+					at its bottom then click on the table button or use the table keyboard shortcut
+					<code>Ctrl+Shift+T</code>
+					.
+				</p>
+
+				<p>The last button in the editor's toolbar is to clear the editor's content.</p>
+
+				<sme-table-container>
+					<table>
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>Function</th>
+								<th>Shortcut</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="icon icon-tabler icon-tabler-trash"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<title>Clear Editor - Ctrl+Shift+X</title>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M4 7l16 0" />
+										<path d="M10 11l0 6" />
+										<path d="M14 11l0 6" />
+										<path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+										<path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+									</svg>
+								</td>
+								<td align="center">Clear Editor</td>
+								<td align="center">Ctrl+Shift+X</td>
+							</tr>
+						</tbody>
+					</table>
+				</sme-table-container>
+
+				<hr />
+			</sme-docs-editor>
+
+			<sme-docs-preview>
+				<h2>The HTML Preview</h2>
+
+				<p>The HTML Preview displays the output of the Markdown syntax from the editor as you type.</p>
+
+				<p>The toolbar above the HTML preview contains the following buttons:</p>
+
+				<ol>
+					<li>
+						A
+						<strong>Preview</strong>
+						drop-down with 2 buttons:
+						<ol>
+							<li>Preview raw HTML</li>
+							<li>Preview parsed Markdow</li>
+						</ol>
+					</li>
+					<li>
+						A
+						<strong>Copy</strong>
+						drop-down with 2 buttons:
+						<ol>
+							<li>Copy raw HTML from the Preview</li>
+							<li>Copy Markdown syntax from the Editor</li>
+						</ol>
+					</li>
+					<li>
+						A
+						<strong>Download</strong>
+						drop-down with 2 buttons:
+						<ol>
+							<li>Download the parsed HTML from the Preview</li>
+							<li>Download the Markdown syntax from the Editor</li>
+						</ol>
+					</li>
+					<li>A help button leading to this page</li>
+				</ol>
+			</sme-docs-preview>
+		</main>
+
+		<footer data-sm="column pad gap" data-md="4column">
+			<footer-copyright data-sm="center textC">
+				<sme-logo data-sm="2column">
+					<a href="/"><img src="/img/sme-logo.svg" alt="Simple Markdown Editor Logo" /></a>
+
+					<sme-logo-text data-sm="middle">
+						<span>Simple</span>
+						<br />
+						<span>Markdown</span>
+						<br />
+						<span>Editor</span>
+					</sme-logo-text>
+				</sme-logo>
+
+				<p>
+					Built with ❤️ by
+					<a href="https://lebcit.github.io/" target="_blank" rel="external noopener noreferrer">LebCit</a>
+				</p>
+
+				<p>Code licensed MIT</p>
+
+				<p>Currently v1.0.0</p>
+			</footer-copyright>
+
+			<hr data-md="hide" />
+
+			<footer-design-credits data-sm="center textC">
+				<h2>Design Credits</h2>
+
+				<p>
+					Made with astonishing
+					<br />
+					<a
+						href="https://matthewjamestaylor.com/responsive-attributes"
+						target="_blank"
+						rel="external noopener noreferrer"
+					>
+						Responsive Attributes
+					</a>
+				</p>
+
+				<p>
+					Popup boxes
+					<br />
+					<a href="https://sweetalert2.github.io/" target="_blank" rel="external noopener noreferrer">
+						SweetAlert2
+					</a>
+				</p>
+
+				<p>
+					Icons
+					<br />
+					<a href="https://tabler.io/icons" target="_blank" rel="external noopener noreferrer">
+						Tabler Icons
+					</a>
+				</p>
+			</footer-design-credits>
+
+			<hr data-md="hide" />
+
+			<footer-dev-credits data-sm="center textC">
+				<h2>Dev Credits</h2>
+
+				<p>
+					Markdown Parser
+					<br />
+					<a href="https://github.com/markedjs/marked" target="_blank" rel="external noopener noreferrer">
+						Marked
+					</a>
+				</p>
+
+				<p>
+					DOM Sanitizer
+					<br />
+					<a href="https://github.com/cure53/DOMPurify" target="_blank" rel="external noopener noreferrer">
+						DOMPurify
+					</a>
+				</p>
+
+				<p>
+					Undo and Redo
+					<br />
+					<a
+						href="https://github.com/ArthurClemens/JavaScript-Undo-Manager"
+						target="_blank"
+						rel="external noopener noreferrer"
+					>
+						Undo Manager
+					</a>
+				</p>
+			</footer-dev-credits>
+
+			<hr data-md="hide" />
+
+			<footer-about data-sm="center textC">
+				<h2>Me in short!</h2>
+
+				<p>
+					Autodidactic Web Developer.
+					<br />
+					Love to Read, Learn &amp; DIMySelf!
+				</p>
+
+				<a href="https://lebcit.github.io/pages/about/" target="_blank" rel="external noopener noreferrer">
+					Short story of my dev journey
+				</a>
+			</footer-about>
+		</footer>
+	</body>
+</html>

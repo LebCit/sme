@@ -1,0 +1,103 @@
+:root {
+	--sme-br: 5px;
+	--sme-ff: Verdana, Geneva, Tahoma, sans-serif;
+	--sme-fs: calc(15px + 0.390625vw);
+	--sme-gff: "Martian Mono", monospace;
+	--sme-gray-1: #fcfcfd;
+	--sme-gray-2: #f8fafc;
+	--sme-gray-3: #eef2f6;
+	--sme-gray-4: #e3e8ef;
+	--sme-gray-5: #cdd5df;
+	--sme-gray-6: #9aa4b2;
+	--sme-gray-7: #697586;
+	--sme-gray-8: #4b5565;
+	--sme-gray-9: #364152;
+	--sme-gray-10: #202939;
+	--sme-gray-11: #121926;
+	--sme-light-editor-border: 5px solid var(--sme-gray-3);
+	--sme-lh: 1.5;
+
+	background-color: var(--sme-gray-10);
+	color: var(--sme-gray-1);
+	line-height: var(--sme-lh);
+	font-family: var(--sme-ff);
+	font-size: var(--sme-fs);
+}
+
+/* HEADER */
+header {
+	background-color: var(--sme-gray-11);
+	border-bottom: 2px solid var(--sme-gray-8);
+	grid-template-columns: auto 1fr auto !important;
+	position: sticky;
+	top: 0;
+}
+
+header > h1 {
+	font-family: var(--sme-gff);
+	font-style: italic;
+}
+
+header > a {
+	display: inherit;
+	width: 40px;
+}
+
+/* MAIN */
+main a {
+	color: #75bbf2;
+}
+
+/* TABLE */
+sme-table-container {
+	overflow-x: auto;
+}
+
+table {
+	border-collapse: collapse; /* Remove spacing between cells */
+	width: 100%;
+}
+
+th,
+td {
+	padding: 8px; /* Add padding around text */
+	border: 1px solid var(--sme-gray-4); /* Add a light gray border */
+}
+
+th {
+	background-color: var(--sme-gray-11); /* Dark gray background for headers */
+	font-weight: bold; /* Bold text for headers */
+}
+
+tr:nth-child(even) {
+	/* Even rows */
+	background-color: var(--sme-gray-9); /* Lighter dark gray background for even rows */
+}
+
+/* FOOTER */
+footer {
+	background-color: var(--sme-gray-11);
+	border-top: 2px solid var(--sme-gray-8);
+}
+
+footer a {
+	color: #50aaf2;
+}
+
+footer-copyright > sme-logo > sme-logo-text {
+	font-family: var(--sme-gff);
+	font-style: italic;
+	font-weight: bold;
+}
+
+footer-copyright > sme-logo > sme-logo-text > span:first-child {
+	color: #ccfdf3; /* Targets the first span */
+}
+
+footer-copyright > sme-logo > sme-logo-text > span:nth-child(3) {
+	color: #67f5ef; /* Targets the second span */
+}
+
+footer-copyright > sme-logo > sme-logo-text > span:nth-child(5) {
+	color: #08c7e0; /* Targets the third span */
+}
